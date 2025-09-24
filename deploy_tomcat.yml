@@ -27,13 +27,13 @@
 
   - name: backup file with owner and permissions
     copy:
-      src: /opt/tomcat/webapps/webapp.war
-      dest: /home/ubuntu/backup/webapp.war
+      src: /opt/tomcat/webapps/webappnew.war
+      dest: /home/ubuntu/backup/webappnew.war
       remote_src: yes
 
   - name: Delete remote war file
     file:
-      path: /opt/tomcat/webapps/webapp.war
+      path: /opt/tomcat/webapps/webappnew.war
       state: absent
 
   - name: deploy file with owner and permissions
