@@ -1,7 +1,7 @@
 ---
 - hosts: websever
   become: yes
-    vars:
+  vars:
     build_number: '{{ BUILD_NUMBER }}'
   #become_user: tomcat
   tasks:
