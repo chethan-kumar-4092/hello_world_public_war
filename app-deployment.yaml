@@ -8,11 +8,11 @@ spec:
     app.kubernetes.io/app: devopsapp
   ports:
       # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
-    - port: 80
-      targetPort: 80
+    - port: 8080
+      targetPort: 8222
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-      #nodePort: 30007
+      nodePort: 30222
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: nginx:latest
+        image: hiqodenew.jfrog.io/sample-war-app/sample_docker_image_with_war_deploy:v1.0-13
         ports:
-        - containerPort: 80
+        - containerPort: 8222
