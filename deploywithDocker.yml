@@ -6,7 +6,7 @@
   tasks:
       
     - name: login to jfrog
-      shell: docker login -u chethanarjun@gmail.com -p Chethankumar@123 hiqodenew.jfrog.io  
+      shell: docker login -u chethanarjun@gmail.com -p Chethankumar@123 softlabs.jfrog.io  
     
     - name: pull an image
       shell: docker pull softlabs.jfrog.io/sample-war-app/sample_docker_image_with_war_deploy:v1.0-{{ build_number }}
