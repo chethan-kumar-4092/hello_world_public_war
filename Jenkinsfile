@@ -2,7 +2,7 @@ pipeline{
     agent any
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "maven_3.9.9"
+        maven "maven_m3"
     }
     stages{
         stage('checkout'){
